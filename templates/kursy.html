@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kalkulator walut</title>
+</head>
+<body><table><tr>
+<td></td>Kalkulator walut</td>
+    </tr></table>
+    <br>
+    <form method="POST" action="/kalkulator" name="b">
+        <select name="option">
+            {% for item in items %}
+            <option value={{item}}>{{item[1]}}</option>
+            {% endfor %}
+            </select>
+        <input type="number"  name="amount">
+        <input type="submit" value="Przelicz">
+    </form>
+    <p>cena: {{b}} PLN</p>
+    <p>kwota: {{p}} PLN</p>
+</body>
+</html>
